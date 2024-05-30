@@ -1,1 +1,1 @@
-# SOC-Design-and-Planning
+# Contents covered in the Workshop:
