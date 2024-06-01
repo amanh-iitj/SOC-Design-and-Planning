@@ -1,6 +1,6 @@
 # Contents covered in the Workshop:
 
-# Chapter 1 - Inception of open-source EDA, OpenLANE and sky130 PDK
+# Day 1 - Inception of open-source EDA, OpenLANE and sky130 PDK
 - How to talk to computers
 - Introduction to QFN-48 Package, chip, pads, core, die and IPs
 - Introduction to RISC-V
@@ -16,7 +16,7 @@
 - Review files after design prep and run synthesis
 - OpenLANE Project Git Link Description
 - Steps to characterize synthesis results
-# Chapter 2 - Good floor planning considerations
+# Day 2 - Good floor planning considerations
 - Chip Floor planning consideration
 - Utilization factor and aspect ratio
 - Concept of pre-placed cells
@@ -40,7 +40,7 @@
 - General timing characterization parameters
 - Timing threshold definitions
 - Propagation delay and transition time
-# Chapter 3 - Design library cell using Magic Layout and ngspice characterization
+# Day 3 - Design library cell using Magic Layout and ngspice characterization
 - Labs for CMOS inverter ngspice simulations
 - IO placer revision
 - SPICE deck creation for CMOS inverter
@@ -68,7 +68,7 @@
 - Lab exercise to implement poly resistor spacing to diff and tap
 - Lab challenge exercise to describe DRC error as geometrical construct
 - Lab challenge to find missing or incorrect rules and fix them
-# Chapter 4 - Pre-layout timing analysis and importance of good clock tree
+# Day 4 - Pre-layout timing analysis and importance of good clock tree
 - Timing modeling using delay tables
 - Lab steps to convert grid info to track info
 - Lab steps to convert magic layout to std cell LEF
@@ -94,7 +94,7 @@
 - Lab steps to analyze timing with real clocks using OpenSTA
 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment
 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
-# Chapter 5 -Final step for RTL2GDS using tritinRoute and openSTA
+# Day 5 -Final step for RTL2GDS using tritinRoute and openSTA
 - Routing and design rule check (DRC)
 - Introduction to Maze Routing Ã�Â� LeeÃ�Â�s algorithm
 - LeeÃ�Â�s Algorithm conclusion
@@ -136,7 +136,7 @@ Place and Route (PnR) is the core of any ASIC implementation and Openlane flow i
 - GDSII Generation
   - Streaming out the final GDSII layout file from the routed def (Magic).
 
-# Lab reports from Chapter 1
+# Lab reports from Day 1
 - Design preparation and initiate Openlane
 ![Screenshot from 2024-05-27 11-22-45](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/2a09579c-da4a-454e-ba36-687e6205442d)
 ![Screenshot from 2024-05-27 11-36-33](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7791eab0-3070-40b1-80ec-0db1f6b58c3b)
@@ -162,5 +162,23 @@ Place and Route (PnR) is the core of any ASIC implementation and Openlane flow i
 - Flop ratio = 1613 / 14876 = 0.1084
 - Flop ratio % = 10.84
   
+# Lab reports from Day 2
+- Review floorplan files
+![Screenshot from 2024-05-27 23-46-56](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c59fdb93-0cbf-44ae-b896-826f561cd3b9)
+![Screenshot from 2024-05-28 13-08-24](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/a95f2778-7c55-47e3-ae64-cdcf1180dbe0)
+![Screenshot from 2024-05-28 13-04-43](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/4e482775-64fe-428e-9ada-8f0679f00c54)
+![Screenshot from 2024-05-27 23-17-42](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/66901b96-a237-4945-ab9e-e30147dd83cc)
+![Screenshot from 2024-05-28 13-09-01](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/36676065-7ffb-4279-9401-9ffcb3c7fa6a)
+- From the picorv32a.def file, it is seen that width of chip is 660.685 micrometer and height of the chip is 671.405 micrometer. 
 
+- Floorplan layout in Magic
+![Screenshot from 2024-05-27 23-25-50](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/478e02bd-eb6b-481e-bf59-8aae5e312942)
+![Screenshot from 2024-05-27 23-49-19](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/0abb122a-b883-4b4c-8740-54ddbb8c0b89)
+![Screenshot from 2024-05-27 23-48-03](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/b0fa5dd1-6ed3-44b4-aea4-0510cf11bcc4)
+
+- Congestion aware placement using RePlAce
+![Screenshot from 2024-05-28 12-56-13](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/623ebb9c-5e23-4e63-967a-989ce691f96a)
+![Screenshot from 2024-05-28 12-56-56](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7c0f8e9f-fe9b-49dc-b81b-25086fe7a8f0)
+![Screenshot from 2024-05-28 12-57-09](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/72a4c600-d204-4e1d-a126-edca3311a777)
+  
 
