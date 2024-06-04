@@ -300,9 +300,9 @@ run_synthesis
 - Post-Synthesis timing analysis with OpenSTA tool
 - Commands:
 - #Change directory to openlane
-  cd Desktop/work/tools/openlane_working_dir/openlane
-  #Command to invoke OpenSTA tool with script
-  sta pre_sta.conf
+- cd Desktop/work/tools/openlane_working_dir/openlane
+- #Command to invoke OpenSTA tool with script
+- sta pre_sta.conf
 ![Screenshot from 2024-06-03 12-42-04](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/12f4e2e1-0403-4ad4-846a-69a8b702baa4)
 
 - pre_sta.conf file
@@ -314,13 +314,13 @@ run_synthesis
 -  Make timing ECO fixes to remove all violations
 - Commands:
 - #Reports all the connections to a net
-  report_net -connections _12771_
-  #Checking command syntax
-  help replace_cell
-  #Replacing cell
-  replace_cell _15446_ sky130_fd_sc_hd__o21bai_4
-  #Generating custom timing report
-  report_checks -fields {net cap slew input_pins} -digits 4
+- report_net -connections _12771_
+- #Checking command syntax
+- help replace_cell
+- #Replacing cell
+- replace_cell _15446_ sky130_fd_sc_hd__o21bai_4
+- #Generating custom timing report
+- report_checks -fields {net cap slew input_pins} -digits 4
 ![Screenshot from 2024-06-03 12-43-48](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/754dfbb1-5fa3-4433-8016-b46082e54241)
 ![Screenshot from 2024-06-03 12-44-58](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/64bb5e8d-a8bf-49a4-9f45-573b4dbdbc94)
 ![Screenshot from 2024-06-03 12-43-09](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9f3dd500-c0f9-4257-8aae-896e19784054)
@@ -370,12 +370,55 @@ run_synthesis
 ![Screenshot from 2024-06-03 17-45-09](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e9d56740-36b7-4f12-92c5-3207622e7b76)
 ![Screenshot from 2024-06-03 17-45-58](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/a5ed38e2-471e-4c61-8f02-671b95a235d6)
 
+# Lab reports from Day 5
+- Perform generation of Power Distribution Network (PDN)
+![Screenshot from 2024-06-03 21-19-05](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/cb897a62-c727-488d-b4d8-7e552dd4e45e)
 
+- load PDN def in magic in another terminal
+- Commands:
+- #Change directory to path containing generated PDN def
+- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/tmp/floorplan/
+- #Command to load the PDN def in magic tool
+- magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
+![Screenshot from 2024-06-03 21-21-12](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/d50a5dc7-a23e-463b-90a3-39b81205b363)
+![Screenshot from 2024-06-03 21-22-05](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/b06fdd80-badd-4463-b62f-df62fe9f89ba)
+![Screenshot from 2024-06-03 21-22-10](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e6834d4d-6ce0-47a9-8295-91368f45c71b)
+![Screenshot from 2024-06-03 22-02-29](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ad819144-09d4-47f6-90d6-2a24ff64e764)
 
+- Perform detailed routing using TritonRoute and explore the routed layout
+![Screenshot from 2024-06-03 21-23-45](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/539d3fc5-0af9-42d4-9768-0b703f2cd63d)
+![Screenshot from 2024-06-03 21-40-34](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/6677bd01-b23c-4718-a6ca-45b93fb67a7b)
 
+- Load routed def in magic
+- Commands:
+- #Change directory to path containing routed def
+- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/results/routing/
+- #Command to load the routed def in magic tool
+- magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+![Screenshot from 2024-06-03 22-12-24](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e8115836-1a93-48a5-a51d-366586fe0d1d)
+![Screenshot from 2024-06-03 22-06-48](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/75572598-922e-4cc9-a663-ef3138e1bafb)
+![Screenshot from 2024-06-03 22-08-34](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e9f32f8c-cb8d-448b-98a0-53b8c1795c7b)
+![Screenshot from 2024-06-03 22-02-35](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/661ebc00-c21f-4b35-9af1-f9ad34d69eaf)
+![Screenshot from 2024-06-03 22-03-06](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/917855c5-f3a8-44dc-a387-0c98f3fd62c3)
 
+- Parasitics command is already run and spef is extracted
+ 
+- fastroute.guide file
+![Screenshot from 2024-06-03 22-05-23](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/2367c823-dd63-4de6-b6b5-6f2dc18f569a)
+![Screenshot from 2024-06-03 22-05-27](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/d314b083-4124-48a7-bd38-1eb86027721a)
 
+- Post-Route parasitic extraction using SPEF extractor
+- In runs folder, where routing outputs are dumped and we'll find the SPEF there. 
+- Commands:
+- #Command extract spef
+  python3 main.py /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/tmp/merged.lef 
+  /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/results/routing/picorv32a.def
 
+  
+# Acknowledgements
+- Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+- Nickson P Jose, Physical Design Engineer, Intel Corporation.
+- R. Timothy Edwards, Senior Vice President of Analog and Design, efabless Corporation.
 
 
 
