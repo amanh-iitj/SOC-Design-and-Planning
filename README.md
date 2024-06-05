@@ -566,7 +566,7 @@ run_synthesis
 - load PDN def in magic in another terminal
 - Commands:
 - #Change directory to path containing generated PDN def
-- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/tmp/floorplan/
+- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/tmp/floorplan/
 - #Command to load the PDN def in magic tool
 - magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
 ![Screenshot from 2024-06-03 21-21-12](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/d50a5dc7-a23e-463b-90a3-39b81205b363)
@@ -581,7 +581,7 @@ run_synthesis
 - Load routed def in magic
 - Commands:
 - #Change directory to path containing routed def
-- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/results/routing/
+- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/results/routing/
 - #Command to load the routed def in magic tool
 - magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ![Screenshot from 2024-06-03 22-12-24](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e8115836-1a93-48a5-a51d-366586fe0d1d)
@@ -600,8 +600,8 @@ run_synthesis
 - In runs folder, where routing outputs are dumped and we'll find the SPEF there. 
 - Commands:
 - #Command extract spef
-  python3 main.py /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/tmp/merged.lef 
-  /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/results/routing/picorv32a.def
+  python3 main.py /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/tmp/merged.lef 
+  /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/results/routing/picorv32a.def
 
   
 # Acknowledgements
