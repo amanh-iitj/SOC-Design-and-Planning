@@ -257,13 +257,13 @@ Whenever Aspect Ratio is 1 it signifies that chip is square shaped. When it is n
 # Theory from Day 3 : Design library cell using Magic Layout and ngspice characterization
 - SPICE deck creation for CMOS inverter
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/4f6b953f-ff7b-4874-9cdc-5ccfa27294e2)
-Values for the PMOS nad NMOS. We have taken the same size of both PMOS and NMOS.
+Values for the PMOS and NMOS. We have taken the same size of both PMOS and NMOS.
 
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/71cb51cd-7960-4ed2-8283-6f91cb685298)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/f9045f20-2785-4633-ae11-3a1d0a6929a6)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/22565bed-feca-4e5d-bfb4-1e7dcf32c28c)
 
-- Inception of layout ̂A CMOS faabrication process
+- Inception of layout of CMOS faabrication process
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c4cac354-2275-46f2-ba33-4f822235b05f)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7da34b24-0657-49e5-bd79-b01f79a26633)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/535fac0a-1a40-4225-ae21-65d85d9808d6)
