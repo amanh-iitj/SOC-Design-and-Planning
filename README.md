@@ -109,12 +109,15 @@
 - TritonRoute method to handle connectivity
 - Routing topology algorithm and final files list post-route
 
-# Introduction to Openlane flow
+
+# Theory from day 1 : Inception of open-source EDA, OpenLANE and sky130 PDK
+
+## Introduction to Openlane flow
 -OpenLANE is a completely automated RTL to GDSII flow which embeds in it different opensource tools, namely, OpenROAD, Yosys, ABC, Magic etc., apart from many custom methodology scripts for design exploration and optimization. Openlane is built around Skywater 130nm process node and is capable of performing full ASIC implementation steps from RTL all the way down to GDSII. The flow-chart below gives a better picture of openlane flow as a whole (Image Courtesy: efabless/openlane)
 
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/3bd62a5f-a480-401a-b15a-66ffee4394ee)
 
-# Overview of Physical Design flow
+## Overview of Physical Design flow
 Place and Route (PnR) is the core of any ASIC implementation and Openlane flow integrates into it several key open source tools which perform each of the respective stages of PnR. Below are the stages and the respective tools (in ( )) that are called by openlane for the functionalities as described:
 
 - Synthesis
@@ -136,8 +139,8 @@ Place and Route (PnR) is the core of any ASIC implementation and Openlane flow i
 - GDSII Generation
   - Streaming out the final GDSII layout file from the routed def (Magic).
     
-# Theory from day 1 : Inception of open-source EDA, OpenLANE and sky130 PDK
-- Get familiar to open-source EDA tools
+
+## Get familiar to open-source EDA tools
   
 Basic Linux Commands:
 
