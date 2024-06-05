@@ -392,7 +392,7 @@ Total Cap at node 'C'=> 50fF
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/99745eb5-7fb9-432f-9a20-dac42f65daef)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/db39e623-dde6-43cc-9dcd-798e4db6ebc2)
 
-- Slack= Data ariival time - data required time. Slck either should be positive or 0. If slack goes to negative it is refer to as voilation.
+- Slack= Data arrval time - data required time. Slack should either should be positive or 0. If slack goes to negative it is referred to as voilation.
 
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ae9a25f4-a9c1-48a8-a3d1-d59a20ea54f9)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/922b71c6-4330-449c-9138-afcf88bd8ff4)
@@ -404,7 +404,7 @@ Total Cap at node 'C'=> 50fF
 ![Screenshot from 2024-06-01 12-10-27](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ee6c97ec-419c-4a02-a14d-70e702418562)
 ![Screenshot from 2024-06-01 12-14-53](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9823df8d-4ff8-4afd-92e9-ec8a1817c282)
 
-- Lab steps to convert magic layout to std cell LEF
+- Lab steps to convert magic layout to standard cell LEF
 ![Screenshot from 2024-06-01 12-20-18](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7835700b-c117-459a-b085-03e138654911)
 ![Screenshot from 2024-06-01 12-24-20](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/8f4aa1ee-6567-4bbd-80da-c92d14373c26)
 
@@ -416,7 +416,7 @@ Total Cap at node 'C'=> 50fF
 - sky130_vsdinv.lef
 ![Screenshot from 2024-06-01 12-24-54](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ae14fb32-d37c-4aee-800a-5f0f4caca752)
 
-- Different library files named as typical,slow and fast
+- Different library files
 ![Screenshot from 2024-06-01 12-32-45](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c7b0a99a-c3e2-41ea-a9d6-b0b1b0cebe75)
 ![Screenshot from 2024-06-01 12-35-03](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/64368cfd-b05f-4be7-8a1a-c3ef4fcd279a)
 ![Screenshot from 2024-06-01 12-35-16](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/05490d6d-83b1-4336-b35b-f55e1dbe697b)
@@ -427,10 +427,15 @@ Total Cap at node 'C'=> 50fF
 
 - OPENLANE execution
 - ./flow.tcl -interactive
+
 package require openlane 0.9
+
 prep -design picorv32a
+
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]      
+
 add_lefs -src $lefs
+
 run_synthesis
 
 ![Screenshot from 2024-06-01 12-47-47](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/a4d373bc-f107-43de-90a1-39d79f1fe432)
@@ -445,9 +450,13 @@ run_synthesis
 
 - Floorplan and Placement
 - Commands:
-- init_floorplan
-  place_io
-  tap_decap_or
+
+init_floorplan
+
+place_io
+  
+tap_decap_or
+
 ![Screenshot from 2024-06-02 22-20-24](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/3ff976cc-3907-4323-8746-748b75a63d04)
 ![Screenshot from 2024-06-02 22-20-47](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/cf94cb0a-b7c3-4ab8-bdfd-a99a885e36ea)
 ![Screenshot from 2024-06-02 22-20-54](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/21518fa3-7be0-4d05-bf73-535746f3cae0)
@@ -464,28 +473,44 @@ run_synthesis
 
 - Post-Synthesis timing analysis with OpenSTA tool
 - Commands:
-- #Change directory to openlane
-- cd Desktop/work/tools/openlane_working_dir/openlane
-- #Command to invoke OpenSTA tool with script
-- sta pre_sta.conf
+
+#Change directory to openlane
+
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+#Command to invoke OpenSTA tool with script
+
+sta pre_sta.conf
+
 ![Screenshot from 2024-06-03 12-42-04](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/12f4e2e1-0403-4ad4-846a-69a8b702baa4)
 
 - pre_sta.conf file
+
 ![Screenshot from 2024-06-02 14-14-14](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/03415ebe-a0b6-4c29-bccc-8da786de0ace)
 
 - my_base.sdc file
+
 ![Screenshot from 2024-06-02 14-12-21 (1)](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/4a6d82b2-4bd7-4143-a06e-055cdd6760b5)
 
 -  Make timing ECO fixes to remove all violations
 - Commands:
-- #Reports all the connections to a net
-- report_net -connections _12771_
-- #Checking command syntax
-- help replace_cell
-- #Replacing cell
-- replace_cell _15446_ sky130_fd_sc_hd__o21bai_4
-- #Generating custom timing report
-- report_checks -fields {net cap slew input_pins} -digits 4
+
+#Reports all the connections to a net
+
+report_net -connections _12771_
+
+#Checking command syntax
+
+help replace_cell
+
+#Replacing cell
+
+replace_cell _15446_ sky130_fd_sc_hd__o21bai_4
+
+#Generating custom timing report
+
+report_checks -fields {net cap slew input_pins} -digits 4
+
 ![Screenshot from 2024-06-03 12-43-48](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/754dfbb1-5fa3-4433-8016-b46082e54241)
 ![Screenshot from 2024-06-03 12-44-58](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/64bb5e8d-a8bf-49a4-9f45-573b4dbdbc94)
 ![Screenshot from 2024-06-03 12-43-09](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9f3dd500-c0f9-4257-8aae-896e19784054)
@@ -566,12 +591,17 @@ run_synthesis
 - Perform generation of Power Distribution Network (PDN)
 ![Screenshot from 2024-06-03 21-19-05](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/cb897a62-c727-488d-b4d8-7e552dd4e45e)
 
-- load PDN def in magic in another terminal
+- Load PDN def in magic in another terminal
 - Commands:
-- #Change directory to path containing generated PDN def
-- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/tmp/floorplan/
-- #Command to load the PDN def in magic tool
-- magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
+
+#Change directory to path containing generated PDN def
+
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/tmp/floorplan/
+
+#Command to load the PDN def in magic tool
+
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
+
 ![Screenshot from 2024-06-03 21-21-12](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/d50a5dc7-a23e-463b-90a3-39b81205b363)
 ![Screenshot from 2024-06-03 21-22-05](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/b06fdd80-badd-4463-b62f-df62fe9f89ba)
 ![Screenshot from 2024-06-03 21-22-10](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e6834d4d-6ce0-47a9-8295-91368f45c71b)
@@ -583,10 +613,15 @@ run_synthesis
 
 - Load routed def in magic
 - Commands:
-- #Change directory to path containing routed def
-- cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/results/routing/
-- #Command to load the routed def in magic tool
-- magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+
+#Change directory to path containing routed def
+
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/results/routing/
+
+#Command to load the routed def in magic tool
+
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+
 ![Screenshot from 2024-06-03 22-12-24](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e8115836-1a93-48a5-a51d-366586fe0d1d)
 ![Screenshot from 2024-06-03 22-06-48](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/75572598-922e-4cc9-a663-ef3138e1bafb)
 ![Screenshot from 2024-06-03 22-08-34](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e9f32f8c-cb8d-448b-98a0-53b8c1795c7b)
@@ -602,9 +637,11 @@ run_synthesis
 - Post-Route parasitic extraction using SPEF extractor
 - In runs folder, where routing outputs are dumped and we'll find the SPEF there. 
 - Commands:
-- #Command extract spef
-  python3 main.py /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/tmp/merged.lef 
-  /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/results/routing/picorv32a.def
+
+#Command extract spef
+
+python3 main.py /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/tmp/merged.lef 
+/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-06_15-41/results/routing/picorv32a.def
 
   
 # Acknowledgements
