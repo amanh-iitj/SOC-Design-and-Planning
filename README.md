@@ -392,7 +392,8 @@ Total Cap at node 'C'=> 50fF
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/99745eb5-7fb9-432f-9a20-dac42f65daef)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/db39e623-dde6-43cc-9dcd-798e4db6ebc2)
 
-- Slack= Data arrval time - data required time. Slack should either should be positive or 0. If slack goes to negative it is referred to as voilation.
+- Slack= Data arrival time - data required time.
+- Slack should either be positive or 0. If slack goes to negative it is referred to as violation.
 
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ae9a25f4-a9c1-48a8-a3d1-d59a20ea54f9)
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/922b71c6-4330-449c-9138-afcf88bd8ff4)
