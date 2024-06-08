@@ -98,7 +98,7 @@
 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment
 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
 
-# Day 5 -Final step for RTL2GDS using tritinRoute and openSTA
+# Day 5 -Final step for RTL2GDS using tritonRoute and openSTA
 - Routing and design rule check (DRC)
 - Introduction to Maze Routing and Lee's algorithm
 - Lee's Algorithm conclusion
@@ -739,7 +739,7 @@ Total Cap at node 'C'=> 50fF
 ![Screenshot from 2024-06-03 17-45-58](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/a5ed38e2-471e-4c61-8f02-671b95a235d6)
 
 
-# Theory from Day 5: Final step for RTL2GDS using tritinRoute and openSTA
+# Theory from Day 5: Final step for RTL2GDS using tritonRoute and openSTA
 
 ## Maze Routing
 
