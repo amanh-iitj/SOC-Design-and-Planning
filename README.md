@@ -16,6 +16,7 @@
 - Review files after design prep and run synthesis
 - OpenLANE Project Git Link Description
 - Steps to characterize synthesis results
+
 # Day 2 - Good floor planning considerations
 - Chip Floor planning consideration
 - Utilization factor and aspect ratio
@@ -40,6 +41,7 @@
 - General timing characterization parameters
 - Timing threshold definitions
 - Propagation delay and transition time
+
 # Day 3 - Design library cell using Magic Layout and ngspice characterization
 - Labs for CMOS inverter ngspice simulations
 - IO placer revision
@@ -68,6 +70,7 @@
 - Lab exercise to implement poly resistor spacing to diff and tap
 - Lab challenge exercise to describe DRC error as geometrical construct
 - Lab challenge to find missing or incorrect rules and fix them
+
 # Day 4 - Pre-layout timing analysis and importance of good clock tree
 - Timing modeling using delay tables
 - Lab steps to convert grid info to track info
@@ -94,6 +97,7 @@
 - Lab steps to analyze timing with real clocks using OpenSTA
 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment
 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
+
 # Day 5 -Final step for RTL2GDS using tritinRoute and openSTA
 - Routing and design rule check (DRC)
 - Introduction to Maze Routing and Lee's algorithm
@@ -161,30 +165,30 @@ clear : clears the terminal screen
   
 # Lab reports from Day 1
 
-- Design preparation and initiate Openlane
+## Design preparation and initiate Openlane
 
 ![Screenshot from 2024-05-27 11-22-45](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/2a09579c-da4a-454e-ba36-687e6205442d)
 
 ![Screenshot from 2024-05-27 11-36-33](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7791eab0-3070-40b1-80ec-0db1f6b58c3b)
 
-- Design Specifications of picorv32a
+## Design Specifications of picorv32a
 
 ![Screenshot from 2024-05-27 11-36-33](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/0f80d2a1-a80c-4da5-acc3-2f3ed194675f)
 
-- Run synthesis
+## Run synthesis
 
 ![Screenshot from 2024-05-27 11-49-54](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/08d5d42a-02c9-4cd9-a59e-eb339d7b5183)
 
 ![Screenshot from 2024-05-27 11-33-36](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/4244c9f4-b5f7-41de-998c-1e42c92ffa92)
 
-- STA report
+## STA report
 
 ![Screenshot from 2024-05-27 12-07-34](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/29f78cc5-e4b1-42df-904a-f74f4394cb04)
 
 ![Screenshot from 2024-05-27 12-07-23](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ed05b8ab-e73c-4d19-a53f-ca832e285dfb)
 
 
-- Characterise synthesis results
+## Characterise synthesis results
 
 ![Screenshot from 2024-05-27 11-56-56](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/0254fda9-1161-483b-b871-a1cb52046215)
 
@@ -269,9 +273,9 @@ clear : clears the terminal screen
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7f8d0527-879b-43b8-8cdf-a163d45af6e4)
 
     
-## Lab reports from Day 2
+# Lab reports from Day 2
 
-- Review floorplan files
+## Review floorplan files
 
 ![Screenshot from 2024-05-27 23-46-56](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c59fdb93-0cbf-44ae-b896-826f561cd3b9)
 
@@ -285,7 +289,7 @@ clear : clears the terminal screen
 
 - From the picorv32a.def file, it is seen that width of chip is 660.685 micrometer and height of the chip is 671.405 micrometer. 
 
-- Floorplan layout in Magic
+## Floorplan layout in Magic
 
 ![Screenshot from 2024-05-27 23-25-50](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/478e02bd-eb6b-481e-bf59-8aae5e312942)
 
@@ -293,7 +297,7 @@ clear : clears the terminal screen
 
 ![Screenshot from 2024-05-27 23-48-03](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/b0fa5dd1-6ed3-44b4-aea4-0510cf11bcc4)
 
-- Congestion aware placement using RePlAce
+## Congestion aware placement using RePlAce
 
 ![Screenshot from 2024-05-28 12-56-13](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/623ebb9c-5e23-4e63-967a-989ce691f96a)
 
@@ -387,31 +391,32 @@ clear : clears the terminal screen
 
   
 # Lab reports from Day 3
-- IO placer revision
+
+## IO placer revision
 
 ![Screenshot from 2024-05-29 12-51-00](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c7375c51-2ddf-4e12-ae99-0885459a583d)
 
-- Clone custom inverter standard cell design from github repository and load the custom inverter layout in magic
+## Clone custom inverter standard cell design from github repository and load the custom inverter layout in magic
 
 ![Screenshot from 2024-05-30 20-49-17](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/04f3c746-b4b1-4875-83f2-9d87724e956e)
 
 ![Screenshot from 2024-05-30 21-03-12](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/0ce66388-c892-4ae1-888a-59bd250aa6a1)
 
-- pshort.lib
+## pshort.lib
 
 ![Screenshot from 2024-05-30 21-31-14](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7a738cad-6ddf-428b-81db-bf406ffb7bcf)
  
-- Spice extraction of inverter in magic
+## Spice extraction of inverter in magic
 
 ![Screenshot from 2024-05-30 21-49-26](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/aaf736fe-d2f6-4919-9a52-87e34a50969d)
 
-- ngspice simulation
+## ngspice simulation
 
 ![Screenshot from 2024-05-30 22-36-57](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c289787e-09f0-4541-91ef-7b95b5f81f9e)
 
 ![Screenshot from 2024-05-30 22-37-32](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/cba97ec5-8d7b-4b11-a5ae-395d65da6706)
 
-- Characterize inverter using sky130 model files
+## Characterize inverter using sky130 model files
 
 ![Screenshot from 2024-05-30 23-17-07 (1)](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/cabd2728-892e-4a86-8b84-b9bda9fe9d30)
 
@@ -424,13 +429,13 @@ clear : clears the terminal screen
 - Cell fall delay
   (4.077 - 4.050)e-09 = 27psec
 
-- Content of .magicrc file 
+## Content of .magicrc file 
 
 ![Screenshot from 2024-05-31 21-14-58 (1)](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/46003628-2c24-42df-9846-e101c3d0f06c)
 
 ![Screenshot from 2024-05-31 21-15-58](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/166a53d6-4f22-4983-a124-baaa233c9b23)
 
-- Lab introduction to Magic tool options and DRC rules
+## Lab introduction to Magic tool options and DRC rules
 
 ![Screenshot from 2024-05-31 21-18-52](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/5522ac97-6959-47d9-bd76-2450af2bc100)
 
@@ -440,7 +445,7 @@ clear : clears the terminal screen
 
 ![Screenshot from 2024-05-31 21-50-41](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/1ef5bb28-5b41-4b23-8c34-7a9cfb5c9fef)
 
-- Lab exercise to fix poly.9 error in Sky130 tech-file
+## Lab exercise to fix poly.9 error in Sky130 tech-file
 
 ![Screenshot from 2024-05-31 21-58-47](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/6e658e83-1f2f-4250-8fc3-70a6def6c516)
 
@@ -448,7 +453,7 @@ clear : clears the terminal screen
 
 ![Screenshot from 2024-05-31 22-27-39](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/fd8750e7-9a39-4b7f-8643-064f6b92d2be)
 
-- Lab challenge exercise to describe DRC error as geometrical construct
+## Lab challenge exercise to describe DRC error as geometrical construct
 
 ![Screenshot from 2024-05-31 22-50-03](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/33b67270-2e52-43f4-954b-3e23f8408b6d)
 
@@ -456,7 +461,7 @@ clear : clears the terminal screen
 
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7a65e767-b5bd-437f-96cf-5a0df4bd2267)
 
-- Lab challenge to find missing or incorrect rules and fix them
+## Lab challenge to find missing or incorrect rules and fix them
 
 ![Screenshot from 2024-05-31 23-01-20](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9f47206e-ca91-4ad2-937d-853fed427a5c)
 
@@ -519,7 +524,7 @@ Total Cap at node 'C'=> 50fF
    
 # Lab reports from Day 4
 
-- Lab steps to convert grid info to track info
+## Lab steps to convert grid info to track info
 
 ![Screenshot from 2024-06-01 12-02-57](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/50e30f5c-76ff-42c6-a1fd-18e824eb48ac)
 
@@ -527,23 +532,23 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-01 12-14-53](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9823df8d-4ff8-4afd-92e9-ec8a1817c282)
 
-- Lab steps to convert magic layout to standard cell LEF
+## Lab steps to convert magic layout to standard cell LEF
 
 ![Screenshot from 2024-06-01 12-20-18](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7835700b-c117-459a-b085-03e138654911)
 
 ![Screenshot from 2024-06-01 12-24-20](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/8f4aa1ee-6567-4bbd-80da-c92d14373c26)
 
-- Introduction to timing libs and steps to include new cell in synthesis
+## Introduction to timing libs and steps to include new cell in synthesis
 
 ![Screenshot from 2024-06-01 12-29-43](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/d762f8e0-7f50-431d-aa31-d6e5f4265774)
 
 ![Screenshot from 2024-06-01 12-29-46](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/eaf334ba-e193-4a0b-83b3-dadb1d2ae92a)
 
-- sky130_vsdinv.lef
+## sky130_vsdinv.lef
 
 ![Screenshot from 2024-06-01 12-24-54](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ae14fb32-d37c-4aee-800a-5f0f4caca752)
 
-- Different library files
+## Different library files
 
 ![Screenshot from 2024-06-01 12-32-45](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c7b0a99a-c3e2-41ea-a9d6-b0b1b0cebe75)
 
@@ -551,12 +556,12 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-01 12-35-16](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/05490d6d-83b1-4336-b35b-f55e1dbe697b)
 
-- config.tcl file 
+## config.tcl file 
 
 ![Screenshot 2024-06-04 200637](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/070442ae-b6fe-484a-b17a-25c17641cef6)
 
 
-- OPENLANE execution
+## OPENLANE execution
 - Commands:
 
   ./flow.tcl -interactive
@@ -575,24 +580,24 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-01 12-49-15](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/b849cd23-b5bd-476f-8179-fe3a5066531a)
 
-- README.md file
+## README.md file
 
 ![Screenshot from 2024-06-01 13-22-17](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9ff9fa35-28a1-48db-8cb7-b5effc6a568e)
 
-- Re-synthesis for reduced slack
+## Re-synthesis for reduced slack
 
 ![Screenshot from 2024-06-01 13-31-33](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/000204d8-c04b-47f8-97c8-3146b0afe303)
 
 ![Screenshot from 2024-06-01 13-54-49](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/94bcdc4f-b3a5-453e-8b4a-8905af118495)
 
-- Floorplan and Placement
+## Floorplan and Placement
 - Commands:
 
-   init_floorplan
+  init_floorplan
 
-   place_io
+  place_io
   
-   tap_decap_or
+  tap_decap_or
 
 ![Screenshot from 2024-06-02 22-20-24](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/3ff976cc-3907-4323-8746-748b75a63d04)
 
@@ -603,11 +608,11 @@ Total Cap at node 'C'=> 50fF
 ![Screenshot from 2024-06-02 22-22-04](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/fd6fea61-ac9f-4582-9899-2086acd47d63)
 
 
-- Placement succesfully generated
+## Placement succesfully generated
 
 ![Screenshot from 2024-06-01 19-42-24](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/3acb9c97-0993-4d35-99e7-733d3e65e936)
 
-- Running expand window in tckon
+## Running expand window in tckon
 
 ![Screenshot from 2024-06-02 22-26-33](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/476c95a3-c322-4d88-979a-b55f485fc845)
 
@@ -615,7 +620,7 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-02 22-28-41](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/877a1a13-806a-4066-8b6a-fb0444c905f4)
 
-- Post-Synthesis timing analysis with OpenSTA tool
+## Post-Synthesis timing analysis with OpenSTA tool
 
 - Commands:
 
@@ -629,15 +634,15 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-03 12-42-04](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/12f4e2e1-0403-4ad4-846a-69a8b702baa4)
 
-- pre_sta.conf file
+## pre_sta.conf file
 
 ![Screenshot from 2024-06-02 14-14-14](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/03415ebe-a0b6-4c29-bccc-8da786de0ace)
 
-- my_base.sdc file
+## my_base.sdc file
 
 ![Screenshot from 2024-06-02 14-12-21 (1)](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/4a6d82b2-4bd7-4143-a06e-055cdd6760b5)
 
--  Make timing ECO fixes to remove all violations
+## Make timing ECO fixes to remove all violations
 
 - Commands:
 
@@ -667,23 +672,23 @@ Total Cap at node 'C'=> 50fF
 
 - Slack is reduced from -5.59 to -5.5031
 
--  Cell getting replaced
+## Cell getting replaced
 
 ![Screenshot from 2024-06-03 12-45-57](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/f77c402d-9495-4d04-9507-f4a45d613d57)
 
-- Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts
+## Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts
 
 ![Screenshot from 2024-06-03 12-55-59](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/6b471a90-54ba-407d-ab3b-d47ac391a9aa)
 
-- Write verilog file
+## Write verilog file
 
 ![Screenshot from 2024-06-03 12-55-42](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/f03e18ef-39de-4a75-b3a6-4b9cd022bf12)
 
-- Verified that the netlist is overwritten
+## Verified that the netlist is overwritten
 
 ![Screenshot from 2024-06-03 12-59-28](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/b080051b-1f55-4b07-a700-935c249905e8)
 
-- Load the design and run necessary stages
+## Load the design and run necessary stages
 
 ![Screenshot from 2024-06-03 13-02-41](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/83d3f957-6fa4-43f0-a976-fae0269cdbd2)
 
@@ -691,19 +696,19 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-03 13-05-52](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/484fc7a3-33eb-4bd0-93af-a27bddf5857d)
 
-- cts.tcl
+## cts.tcl
 
 ![Screenshot from 2024-06-03 13-08-34](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9dd6dd49-f091-46c8-b102-bd7c8d56dade)
 
 ![Screenshot from 2024-06-03 13-08-46](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/b9dd3575-85f4-428b-a013-79f1e58a8984)
 
-- or_cts.tcl
+## or_cts.tcl
 
 ![Screenshot from 2024-06-03 13-11-10](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e37b99d2-0f47-4f94-9342-a859e87f99bf)
 
 ![Screenshot from 2024-06-03 13-11-21](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/e65da2c2-6d75-45c4-a18b-afc1097997d9)
 
-- Post-CTS OpenROAD timing analysis
+## Post-CTS OpenROAD timing analysis
 
 ![Screenshot from 2024-06-03 17-33-08 (1)](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/c1d94c30-5049-4b4e-b58a-1fa51ac93565)
 
@@ -717,7 +722,7 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-03 17-37-56](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/af8b2b4d-d4b6-45f7-bac3-277d32a21c79)
 
-- Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'
+## Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'
 
 ![Screenshot from 2024-06-03 17-40-06](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ec13eac7-fd90-434b-b294-ff4e74ba4573)
 
@@ -766,18 +771,18 @@ Total Cap at node 'C'=> 50fF
 
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/0f7c8714-1f36-47a7-aced-51717418355d)
 
-- Rouitng algorithm
+## Rouitng algorithm
 
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9e021ab9-58d8-4675-ac1f-665c669877b2)
 
   
 # Lab reports from Day 5
 
-- Perform generation of Power Distribution Network (PDN)
+## Perform generation of Power Distribution Network (PDN)
 
 ![Screenshot from 2024-06-03 21-19-05](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/cb897a62-c727-488d-b4d8-7e552dd4e45e)
 
-- Load PDN def in magic in another terminal
+## Load PDN def in magic in another terminal
 
 - Commands:
 
@@ -797,13 +802,13 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-03 22-02-29](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ad819144-09d4-47f6-90d6-2a24ff64e764)
 
-- Perform detailed routing using TritonRoute and explore the routed layout
+## Perform detailed routing using TritonRoute and explore the routed layout
 
 ![Screenshot from 2024-06-03 21-23-45](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/539d3fc5-0af9-42d4-9768-0b703f2cd63d)
 
 ![Screenshot from 2024-06-03 21-40-34](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/6677bd01-b23c-4718-a6ca-45b93fb67a7b)
 
-- Load routed def in magic
+## Load routed def in magic
 
 - Commands:
 
@@ -825,9 +830,7 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-03 22-03-06](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/917855c5-f3a8-44dc-a387-0c98f3fd62c3)
 
-- Parasitics command is already run and spef is extracted
- 
-- fastroute.guide file
+## fastroute.guide file
 
 ![Screenshot from 2024-06-03 22-05-23](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/2367c823-dd63-4de6-b6b5-6f2dc18f569a)
 
@@ -835,6 +838,7 @@ Total Cap at node 'C'=> 50fF
 
 ## SPEF extraction
 
+- Parasitics command is already run and spef is extracted
 - Post-Route parasitic extraction using SPEF extractor
 - In runs folder, where routing outputs are dumped and we'll find the SPEF there. 
 
