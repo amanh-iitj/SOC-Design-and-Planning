@@ -836,10 +836,9 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-03 22-05-27](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/d314b083-4124-48a7-bd38-1eb86027721a)
 
-## SPEF extraction
+## Post-Route parasitic extraction
 
 - Parasitics command is already run and spef is extracted
-- Post-Route parasitic extraction using SPEF extractor
 - In runs folder, where routing outputs are dumped and we'll find the SPEF there. 
 
 - Commands:
