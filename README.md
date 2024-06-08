@@ -722,7 +722,7 @@ Total Cap at node 'C'=> 50fF
 
 ![Screenshot from 2024-06-03 17-37-56](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/af8b2b4d-d4b6-45f7-bac3-277d32a21c79)
 
-## Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'
+## Post-CTS OpenROAD timing analysis 
 
 ![Screenshot from 2024-06-03 17-40-06](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/ec13eac7-fd90-434b-b294-ff4e74ba4573)
 
