@@ -1,6 +1,6 @@
-# Contents covered in the Workshop:
+# Topics covered in the Workshop:
 
-# Day 1 - Inception of open-source EDA, OpenLANE and sky130 PDK
+# Section 1 - Inception of open-source EDA, OpenLANE and sky130 PDK
 - How to talk to computers
 - Introduction to QFN-48 Package, chip, pads, core, die and IPs
 - Introduction to RISC-V
@@ -17,7 +17,7 @@
 - OpenLANE Project Git Link Description
 - Steps to characterize synthesis results
 
-# Day 2 - Good floor planning considerations
+# Section 2 - Good floor planning considerations
 - Chip Floor planning consideration
 - Utilization factor and aspect ratio
 - Concept of pre-placed cells
@@ -42,7 +42,7 @@
 - Timing threshold definitions
 - Propagation delay and transition time
 
-# Day 3 - Design library cell using Magic Layout and ngspice characterization
+# Section 3 - Design library cell using Magic Layout and ngspice characterization
 - Labs for CMOS inverter ngspice simulations
 - IO placer revision
 - SPICE deck creation for CMOS inverter
@@ -71,7 +71,7 @@
 - Lab challenge exercise to describe DRC error as geometrical construct
 - Lab challenge to find missing or incorrect rules and fix them
 
-# Day 4 - Pre-layout timing analysis and importance of good clock tree
+# Section 4 - Pre-layout timing analysis and importance of good clock tree
 - Timing modeling using delay tables
 - Lab steps to convert grid info to track info
 - Lab steps to convert magic layout to std cell LEF
@@ -98,7 +98,7 @@
 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment
 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
 
-# Day 5 -Final step for RTL2GDS using tritonRoute and openSTA
+# Section 5 -Final step for RTL2GDS using tritonRoute and openSTA
 - Routing and design rule check (DRC)
 - Introduction to Maze Routing and Lee's algorithm
 - Lee's Algorithm conclusion
@@ -114,7 +114,7 @@
 - Routing topology algorithm and final files list post-route
 
 
-# Theory from day 1 : Inception of open-source EDA, OpenLANE and sky130 PDK
+# Theory shorts from Section 1 : Inception of open-source EDA, OpenLANE and sky130 PDK
 
 ## Introduction to Openlane flow
 -OpenLANE is a completely automated RTL to GDSII flow which embeds in it different opensource tools, namely, OpenROAD, Yosys, ABC, Magic etc., apart from many custom methodology scripts for design exploration and optimization. Openlane is built around Skywater 130nm process node and is capable of performing full ASIC implementation steps from RTL all the way down to GDSII. The flow-chart below gives a better picture of openlane flow as a whole (Image Courtesy: efabless/openlane)
@@ -163,7 +163,7 @@ clear : clears the terminal screen
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/a709df4f-230e-4ea0-8b96-87aeb42a3c43)
 
   
-# Lab reports from Day 1
+# Lab reports from Section 1
 
 ## Design preparation and initiate Openlane
 
@@ -199,8 +199,9 @@ clear : clears the terminal screen
 - We know, Flop ratio = Number of counter D-FF / Number of total cells
 - Flop ratio = 1613 / 14876 = 0.1084
 - Flop ratio % = 10.84
+  
 
-# Theory from Day 2 : Good floor planning considerations
+# Theory shorts from Section 2 : Good floor planning considerations
 
 ## Utilization factor and aspect ratio
 
@@ -273,7 +274,7 @@ clear : clears the terminal screen
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/7f8d0527-879b-43b8-8cdf-a163d45af6e4)
 
     
-# Lab reports from Day 2
+# Lab reports from Section 2
 
 ## Review floorplan files
 
@@ -306,7 +307,8 @@ clear : clears the terminal screen
 ![Screenshot from 2024-05-28 12-57-09](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/72a4c600-d204-4e1d-a126-edca3311a777)
 
 
-# Theory from Day 3 : Design library cell using Magic Layout and ngspice characterization
+
+# Theory shorts from Section 3 : Design library cell using Magic Layout and ngspice characterization
 
 ## SPICE deck creation for CMOS inverter
 
@@ -390,7 +392,7 @@ clear : clears the terminal screen
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/a17b012d-f7b5-4ecd-9371-62eaed058423)
 
   
-# Lab reports from Day 3
+# Lab reports from Section 3
 
 ## IO placer revision
 
@@ -466,7 +468,7 @@ clear : clears the terminal screen
 ![Screenshot from 2024-05-31 23-01-20](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9f47206e-ca91-4ad2-937d-853fed427a5c)
 
 
-# Theory from Day 4 : Pre-layout timing analysis and importance of good clock tree
+# Theory shorts from Section 4 : Pre-layout timing analysis and importance of good clock tree
 
 ## Delay tables
 
@@ -522,7 +524,7 @@ Total Cap at node 'C'=> 50fF
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/922b71c6-4330-449c-9138-afcf88bd8ff4)
 
    
-# Lab reports from Day 4
+# Lab reports from Sections 4
 
 ## Lab steps to convert grid info to track info
 
@@ -739,7 +741,7 @@ Total Cap at node 'C'=> 50fF
 ![Screenshot from 2024-06-03 17-45-58](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/a5ed38e2-471e-4c61-8f02-671b95a235d6)
 
 
-# Theory from Day 5: Final step for RTL2GDS using tritonRoute and openSTA
+# Theory shorts from Section 5: Final step for RTL2GDS using tritonRoute and openSTA
 
 ## Maze Routing
 
@@ -776,7 +778,7 @@ Total Cap at node 'C'=> 50fF
 ![image](https://github.com/amanh-iitj/SOC-Design-and-Planning/assets/155350256/9e021ab9-58d8-4675-ac1f-665c669877b2)
 
   
-# Lab reports from Day 5
+# Lab reports from Section 5
 
 ## Perform generation of Power Distribution Network (PDN)
 
